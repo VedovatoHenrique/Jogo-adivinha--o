@@ -7,15 +7,7 @@
 
  btnTry.addEventListener('click', handleTryClick)
  btnAgain.addEventListener('click', handleResetClick) 
- document.addEventListener('keypress', function(e) {
-  if(e.key == 'Enter'){
-    handleResetClick()
-  }
- })
- function toggleScreen() {
-  screen1.classList.toggle('hide')
-  screen2.classList.toggle('hide')
-} 
+ 
  function handleTryClick(event){
   event.preventDefault()
 
@@ -33,7 +25,14 @@
   xAttempts++
 
  }
+
+
 function handleResetClick(){
   toggleScreen()
   xAttempts = 1
+}
+
+function toggleScreen() {
+  screen1.classList.toggle('hide')
+  screen2.classList.toggle('hide')
 }
